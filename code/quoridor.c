@@ -194,8 +194,7 @@ void jeu(Joueur j1,Joueur j2)
 	Point p1={40,295};
 	afficher_texte(j1.nom,20,p1,blanc);
 	p1.x=990;
-	afficher_texte(j1.nom,20,p1,blanc);
-	afficher_texte(j1.nom,20,p1,blanc);
+	afficher_texte(j2.nom,20,p1,blanc);
 	quadrillage();
 	initialisation_posi_joueur(j1,j2);
 	actualiser();
@@ -461,6 +460,7 @@ void initialisation_posi_joueur(Joueur j1,Joueur j2)
 
 
 // affiche les instructions 
+/* problème de paramètre pour les affiche_texte() suivant
 void instruction(int valeur)
 {
 		if (valeur == 1)
@@ -470,7 +470,6 @@ void instruction(int valeur)
 		actualiser();
 }
 
-/*
 
 // vérifie si le point donné est bien dans une case
 int verif_deplacement(Point choix)
